@@ -8,25 +8,25 @@ const notes = [
   }
 ];
 const ourSchema = buildSchema(`
-type Query {
-  notes: [Note]
-  note(id: ID): Note
-}
-type Note{
-  id: ID,
-  title: String,
-  content: String,
-  image: String
-}
-input noteinput{
-  title: String,
-  content: String,
-  image: String
-}
-type Mutation {
-  createNote(noteInput: noteinput): Note
-  deleteNote(id: ID): Note
-}
+  type Query {
+    notes: [Note]
+    note(id: ID): Note
+  }
+  type Note{
+    id: ID,
+    title: String,
+    content: String,
+    image: String
+  }
+  input noteinput{
+    title: String,
+    content: String,
+    image: String
+  }
+  type Mutation {
+    createNote(noteInput: noteinput): Note
+    deleteNote(id: ID): Note
+  }
 `);
 const resolver = {
   notes: () => notes,
