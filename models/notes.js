@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 const schema = mongoose.Schema
 
-// Create note schema
+// create notes schema
 const notes = new schema({
     title: {
         type: String,
         required: true
     },
-    content:{
-        type: String,
+    content: {
+        type:String,
         required: true
     },
     image: {
@@ -16,8 +16,8 @@ const notes = new schema({
     },
     userCreator: {
         type: schema.Types.ObjectId,
-        ref: 'Users'
+        ref: "User"
     }
 })
 
-module.exports = mongoose.model('Notes', notes)
+module.exports = mongoose.model("Notes", notes)

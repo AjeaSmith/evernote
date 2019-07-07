@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 const schema = mongoose.Schema
 
-// Create note schema
+// create notes schema
 const users = new schema({
     username: {
         type: String,
         required: true
     },
-    email:{
-        type: String,
+    email: {
+        type:String,
         required: true
     },
     password: {
@@ -21,4 +21,4 @@ const users = new schema({
     }]
 })
 
-module.exports = mongoose.model('Users', users)
+module.exports = mongoose.model("Users", users)

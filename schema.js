@@ -8,14 +8,14 @@ const ourSchema = buildSchema(`
     id: ID
     title: String
     content: String
-    image: String 
+    image: String
     userCreator: User!
   }
-  type User {
+  type User{
     _id: ID
-    username: String!
-    email: String!
-    password: String!
+    username: String
+    email: String
+    password: String
     createdNotes: [Note]
   }
   input noteinput{
@@ -23,10 +23,10 @@ const ourSchema = buildSchema(`
     content: String
     image: String
   }
-  input userinput {
-    username: String!
-    email: String!
-    password: String!
+  input userinput{
+    username: String,
+    email: String
+    password: String
   }
   type Mutation {
     createUser(userInput: userinput): User!
