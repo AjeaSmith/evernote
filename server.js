@@ -4,7 +4,7 @@ const app = express();
 const { ourSchema, resolver } = require("./schema");
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://ajeasmith:OWdmL2QkJrkOPSyT@cluster0-qauba.mongodb.net/test?retryWrites=true&w=majority', (err) =>{
+mongoose.connect('mongodb+srv://ajeasmith:aQV0f7eVVwp5ARli@cluster0-qauba.mongodb.net/evernote?retryWrites=true&w=majority', (err) =>{
   if(err) return console.log(err)
   console.log('connected to mongodb')
 })

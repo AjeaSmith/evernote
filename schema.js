@@ -1,30 +1,36 @@
 const { buildSchema } = require("graphql");
-const notes = [
-  {
-    id: 1,
-    title: "tim",
-    content: "allen",
-    image: "some image"
-  }
-];
 const ourSchema = buildSchema(`
   type Query {
     notes: [Note]
     note(id: ID): Note
   }
   type Note{
-    id: ID,
-    title: String,
-    content: String,
-    image: String
+    id: ID
+    title: String
+    content: String
+    image: String 
+    userCreator: User!
+  }
+  type User {
+    _id: ID
+    username: String!
+    email: String!
+    password: String!
+    createdNotes: [Note]
   }
   input noteinput{
-    title: String,
-    content: String,
+    title: String
+    content: String
     image: String
   }
+  input userinput {
+    username: String!
+    email: String!
+    password: String!
+  }
   type Mutation {
-    createNote(noteInput: noteinput): Note
+    createUser(userInput: userinput): User!
+    createNote(noteInput: noteinput): Note!
     deleteNote(id: ID): Note
   }
 `);
