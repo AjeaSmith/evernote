@@ -1,11 +1,12 @@
 const { buildSchema } = require("graphql");
+const Note = require('./models/notes')
 const ourSchema = buildSchema(`
   type Query {
     notes: [Note]
-    note(id: ID): Note
+    note(_id: ID): Note
   }
   type Note{
-    id: ID
+    _id: ID
     title: String
     content: String
     image: String
@@ -31,21 +32,55 @@ const ourSchema = buildSchema(`
   type Mutation {
     createUser(userInput: userinput): User!
     createNote(noteInput: noteinput): Note!
-    deleteNote(id: ID): Note
+    deleteNote(_id: ID): Note
   }
 `);
 const resolver = {
-  notes: () => notes,
-  note: ({ id }) => notes[id - 1],
-  createNote: ({ noteInput }) => {
-    const note = {
-      id: notes.length + 1,
+  notes: async () =>{
+    try {
+      const Notes = await Note.find((err, notes) =>{
+        if(err) return err
+        return notes
+      })
+      return Notes
+    }catch(err){
+      throw err
+    }
+  },
+  note: async ({_id}) =>{
+  try{
+    const findNote = await Note.findById(_id)
+    return {
+      ...findNote._doc
+    }
+  }catch(err){
+    throw err
+  }
+},
+  deleteNote: async({_id}) =>{
+    try {
+      const note = await Note.findByIdAndRemove({_id: _id})
+      return {...note._doc}
+    }catch(err){
+      throw err
+    }
+  },
+  createNote: async ({noteInput}) =>{
+    const note = new Note({
       title: noteInput.title,
       content: noteInput.content,
       image: noteInput.image
-    };
-    notes.push(note);
-    return note;
+    })
+    let notes;
+    try {
+      const result = await note.save()
+      notes = {
+        ...result._doc
+      }
+      return notes
+    }catch (err){
+      throw err
+    }
   }
 };
 
