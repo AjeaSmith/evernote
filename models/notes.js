@@ -20,4 +20,4 @@ const notes = new schema({
     }
 })
 
-module.exports = mongoose.model("Notes", notes)
+module.exports = mongoose.model("Notes",notes)
