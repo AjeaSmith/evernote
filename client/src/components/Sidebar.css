@@ -1,0 +1,18 @@
+.sidebar-container {
+  width: 100%;
+}
+.header-container {
+  padding: 0.7em 0.7em;
+  border-bottom: 1px solid red;
+}
+.header-top {
+  justify-content: space-between;
+  display: flex;
+}
+.header-below {
+  justify-content: space-between;
+  display: flex;
+}
+.header-account {
+  display: flex;
+}

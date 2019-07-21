@@ -4,9 +4,9 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <Home/>
-    </div>
+    </React.Fragment>
   );
 }
 
