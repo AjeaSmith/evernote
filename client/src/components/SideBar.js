@@ -6,19 +6,17 @@ const SideBar = () => {
   return (
     <React.Fragment>
       <section className="sidebar-container">
-        <div className="header-container mb-12">
+        <div className="header-container w-full border-r-0 border-gray-500 shadow">
           <div className="header-top mb-12">
-            <div className="header-title">
-              <h3>All Notes</h3>
-            </div>
+            <h1 className="header-title text-2xl">All Notes</h1>
             <div className="header-account">
               <div className="header-login pr-3">
-                <p className="text-blue-500">
+                <p className="text-blue-600">
                   <button>Login</button>
                 </p>
               </div>
               <div className="header-register">
-                <p className="text-blue-500">
+                <p className="text-blue-600">
                   <button>Register</button>
                 </p>
               </div>
@@ -29,7 +27,7 @@ const SideBar = () => {
             <div className="header-filter">filter option</div>
           </div>
         </div>
-        <div className="note-list w-full px-2">
+        <div className="note-list w-full px-2 mt-12">
           <Notes />
         </div>
       </section>
