@@ -4,12 +4,13 @@ import Sidebar from "../components/SideBar";
 import "./Home.css";
 import { StateContext } from "../StateContext";
 import LoginModal from "../components/LoginModal";
+import RegisterModal from "../components/RegisterModal";
 const Home = () => {
   const [state] = useContext(StateContext);
-  console.log("home", state.loginToggle);
   return (
     <React.Fragment>
       {state.loginToggle ? <LoginModal /> : ""}
+      {state.registerToggle ? <RegisterModal /> : ""}
       <div className="home-container">
         <div className="sidebar">
           <Sidebar />

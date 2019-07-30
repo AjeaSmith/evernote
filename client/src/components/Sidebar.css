@@ -1,17 +1,24 @@
-.sidebar-container {
-  width: 100%;
+.sidebar-container{
+  display: flex;
+  flex-direction: column;
+  background: rgb(230, 230, 230);
 }
-.header-container {
-  padding: 0.7em 0.7em;
-}
-.header-top {
+.header-container{
+  display: flex;
+  height: 150px;
+  background: rgb(230, 230, 230);
+  padding: 10px 10px;
   justify-content: space-between;
+  flex-direction: column;
+}
+.header-container .header-1{
   display: flex;
 }
-.header-below {
+.header-top{
+  display: flex;
   justify-content: space-between;
-  display: flex;
 }
-.header-account {
+.notes-bottom{
   display: flex;
+  justify-content: space-between;
 }
