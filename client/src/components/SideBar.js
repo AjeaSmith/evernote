@@ -6,10 +6,10 @@ import { StateContext } from "../StateContext";
 const SideBar = () => {
   const [state, setState] = useContext(StateContext);
   const toggleLogin = () => {
-    setState({ ...state, loginToggle: !state.loginToggle });
+    setState({ ...state, loginToggle: true });
   };
   const toggleRegister = () => {
-    setState({ ...state, registerToggle: !state.registerToggle });
+    setState({ ...state, registerToggle: true });
   };
   return (
     <React.Fragment>
