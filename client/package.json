@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.4.3",
+    "draft-js": "^0.11.0",
     "graphql": "^14.4.2",
+    "immutable": "^4.0.0-rc.12",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
+    "react-draft-wysiwyg": "^1.13.2",
     "react-hook-form": "^3.21.4",
     "react-scripts": "3.0.1"
   },

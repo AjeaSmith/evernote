@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import Editor from "../components/Editor";
 import Sidebar from "../components/SideBar";
 import "./Home.css";
 import { StateContext } from "../StateContext";
 import LoginModal from "../components/LoginModal";
 import RegisterModal from "../components/RegisterModal";
+import CodeEditor from "../components/CodeEditor";
 const Home = () => {
   const [state] = useContext(StateContext);
   return (
@@ -16,7 +16,7 @@ const Home = () => {
           <Sidebar />
         </div>
         <div className="editor">
-          <Editor />
+          <CodeEditor />
         </div>
       </div>
     </React.Fragment>
