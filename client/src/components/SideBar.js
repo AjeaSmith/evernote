@@ -22,7 +22,7 @@ const SideBar = () => {
             <div className="header-2 text-blue-500">
               <p className="inline-block pr-3">
                 <button
-                  className="text-blue-500 hover:btn-color text-white font-bold py-2 px-2 rounded"
+                  className="text-blue-500 hover:btn-color text-white py-2 px-2 rounded"
                   type="button"
                   onClick={toggleLogin}
                 >
@@ -31,7 +31,7 @@ const SideBar = () => {
               </p>
               <p className="inline-block">
                 <button
-                  className="text-blue-500 hover:btn-color text-white font-bold py-2 px-2 rounded"
+                  className="text-blue-500 hover:btn-color text-white py-2 px-2 rounded"
                   type="button"
                   onClick={toggleRegister}
                 >
