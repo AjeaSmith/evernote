@@ -10,7 +10,7 @@
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
-    "react-draft-wysiwyg": "^1.13.2",
+    "react-draft-wysiwyg": "^1.14.6",
     "react-hook-form": "^3.21.4",
     "react-scripts": "3.0.1"
   },
